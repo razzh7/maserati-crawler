@@ -4,11 +4,11 @@
 ## TODO
 
 - [x] 首页轮播图
-- [ ] Banner
+- [ ] Banner 模块
 - [ ] 非凡车型系列
-- [ ] Fuoriserie
+- [ ] Fuoriserie 模块
 - [ ] 底部轮播图
-- [ ] footer
+- [ ] Footer 模块
 
 ## 安装
 确保安装 `pnpm` 包管理工具:
