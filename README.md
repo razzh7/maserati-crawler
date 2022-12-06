@@ -1,13 +1,14 @@
 ## maserati-crawler
 玛莎拉蒂汽车官网爬虫脚本，抓取页面文字、图片、视频、链接等
 
-TODO
+## TODO
+
 - [x] 首页轮播图
-- [] Banner
-- [] 非凡车型系列
-- [] Fuoriserie
-- [] 底部轮播图
-- [] footer
+- [ ] Banner
+- [ ] 非凡车型系列
+- [ ] Fuoriserie
+- [ ] 底部轮播图
+- [ ] footer
 
 ## 安装
 确保安装 `pnpm` 包管理工具:
