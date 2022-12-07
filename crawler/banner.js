@@ -27,16 +27,19 @@ async function getBanner() {
 
   banner.forEach(async (item) => {
     if (!item.video) item.video = ''
-    const sql = `INSERT INTO slide1 (id, sildeLabel, sildeTitle, link, img, video)
-    VALUES 
-    (
-      ${null},
-      '${item.sildeLabel}',
-      '${item.sildeTitle}',
-      '${item.link}',
-      '${item.img}',
-      '${item.video}'
-    );`
+    const sql = `
+      INSERT INTO slide1 
+      (id, sildeLabel, sildeTitle, link, img, video)
+      VALUES 
+      (
+        ${null},
+        '${item.sildeLabel}',
+        '${item.sildeTitle}',
+        '${item.link}',
+        '${item.img}',
+        '${item.video}'
+      );
+    `
 
     const connection = createConnection()
     connection.connect()
