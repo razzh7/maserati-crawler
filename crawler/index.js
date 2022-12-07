@@ -1,4 +1,5 @@
 module.exports = {
   getHeader: require('./header'),
-  getBanner: require('./banner')
+  getBanner: require('./banner'),
+  getBottomSilder: require('./bottom-silder')
 }
