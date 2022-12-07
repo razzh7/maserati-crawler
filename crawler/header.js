@@ -19,7 +19,8 @@ async function getHeader() {
   })
 
   const sql = `
-    INSERT INTO header (id, model, brand, ownership)
+    INSERT INTO header 
+    (id, model, brand, ownership)
     VALUES
     (
       ${null},
