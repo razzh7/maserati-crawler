@@ -2,15 +2,15 @@ const crawler = require('./crawler')
 const { createConnection } = require('../config/mysql')
 
 async function bottomSilder() {
-  const silder = await crawler.launch({
+  const slider = await crawler.launch({
     callback() {
       const $ = window.$
-      const silder = $('.stories-carousel-slider .slide')
+      const slider = $('.stories-carousel-slider .slide')
       const data = []
-      silder.each((index, item) => {
+      slider.each((index, item) => {
         const el = $(item)
         const info = {
-          label: el.find('.textLabel').text().trim(),
+          slideLabel: el.find('.textLabel').text().trim(),
           subTitle: el.find('.subtitle').text().trim(),
           imgUrl: el.find('.slide-image-item').prop('src'),
           link: el.find('a').prop('href')
@@ -31,11 +31,11 @@ async function bottomSilder() {
       return data
     }
   })
-  console.log('silder', silder)
+
   const connection = createConnection()
   connection.connect()
 
-  silder.forEach(item => {
+  slider.forEach(item => {
     connection.query(sql(item), (err) => {
       if (err) throw err
     })
@@ -43,17 +43,17 @@ async function bottomSilder() {
 
   connection.end()
 
-  return silder
+  return slider
 }
 
-function sql({label, subTitle, imgUrl, link}) {
+function sql({slideLabel, subTitle, imgUrl, link}) {
   return `
-  INSERT INTO silder2 
-  (id, label, subTitle, imgUrl, link)
+  INSERT INTO slider2 
+  (id, slideLabel, subTitle, imgUrl, link)
   VALUES
   (
     ${null},
-    '${label}',
+    '${slideLabel}',
     '${subTitle}',
     '${imgUrl}',
     '${link}'
