@@ -17,27 +17,30 @@ async function getHeader() {
       }
     }
   })
-
-  const sql = `
-    INSERT INTO header 
-    (id, model, brand, ownership)
-    VALUES
-    (
-      ${null},
-      '${header.model}',
-      '${header.brand}',
-      '${header.ownership}'
-    );
-  `
+  
   const connection = createConnection()
   connection.connect()
 
-  await connection.query(sql, (err) => {
+  await connection.query(sql(header), (err) => {
     if (err) throw err
   })
   
   connection.end()
   return header
+}
+
+function sql({model, brand, ownership}) {
+  return `
+    INSERT INTO header 
+    (id, model, brand, ownership)
+    VALUES
+    (
+      ${null},
+      '${model}',
+      '${brand}',
+      '${ownership}'
+    );
+  `
 }
 
 module.exports = getHeader
