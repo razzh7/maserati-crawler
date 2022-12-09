@@ -11,7 +11,7 @@ module.exports = async function ({url = DEFAULTURL, callback}) {
     await page.goto(url)
   
     const res = await page.evaluate(callback)
-  
+
     await browser.close()
   
     process.send(res)
@@ -19,7 +19,7 @@ module.exports = async function ({url = DEFAULTURL, callback}) {
     setTimeout(() => {
       // 退出子进程
       process.exit(0)
-    }, 500)
+    }, 1000)
   } catch(err) {
     console.log(err)
   }
