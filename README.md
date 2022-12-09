@@ -3,11 +3,11 @@
 
 ## TODO
 
+- [x] Banner 模块
 - [x] 首页轮播图
-- [ ] Banner 模块
 - [ ] 非凡车型系列
 - [ ] Fuoriserie 模块
-- [ ] 底部轮播图
+- [x] 底部轮播图
 - [ ] Footer 模块
 
 ## 安装
@@ -42,5 +42,5 @@ module.exports = {
 }
 ```
 
-之后就可以运行 `pnpm dev` 了
+之后就可以运行 `pnpm dev` 访问 `localhost:3100` 了
 
