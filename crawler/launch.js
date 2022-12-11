@@ -16,10 +16,10 @@ module.exports = async function ({url = DEFAULTURL, callback}) {
   
     process.send(res)
   
-    setTimeout(() => {
+    process.nextTick(() => {
       // 退出子进程
       process.exit(0)
-    }, 1000)
+    })
   } catch(err) {
     console.log(err)
   }
