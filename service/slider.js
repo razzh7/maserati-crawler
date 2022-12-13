@@ -10,11 +10,11 @@ launch({
       const el = $(item)
       const videoSrc = el.find('.video-container-image').prop('src')
       data.push({
-        slideLabel: el.find('.slide-wrapper .slideLabel').text(),
-        slideTitle: el.find('.slide-wrapper .slideTitle').text().trim(),
+        slide_label: el.find('.slide-wrapper .slideLabel').text(),
+        slide_title: el.find('.slide-wrapper .slideTitle').text().trim(),
         link: el.find('a').prop('href'),
-        imgUrl: videoSrc ? videoSrc : el.find('.image-wrapper img').prop('src'),
-        videoUrl: el.find('.preview-video-wrapper video').prop('src')
+        img_url: videoSrc ? videoSrc : el.find('.image-wrapper img').prop('src'),
+        video_url: el.find('.preview-video-wrapper video').prop('src')
       })
 
     })

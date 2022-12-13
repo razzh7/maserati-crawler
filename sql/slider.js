@@ -1,22 +1,22 @@
 module.exports = {
   addSlider({
-    slideLabel,
-    slideTitle,
+    slide_label,
+    slide_title,
     link,
-    imgUrl,
-    videoUrl
+    img_url,
+    video_url
   }) {
     return `
       INSERT INTO slider1 
-      (id, slideLabel, slideTitle, link, imgUrl, videoUrl)
+      (id, slide_label, slide_title, link, img_url, video_url)
       VALUES 
       (
         ${null},
-        '${slideLabel}',
-        '${slideTitle}',
+        '${slide_label}',
+        '${slide_title}',
         '${link}',
-        '${imgUrl}',
-        '${videoUrl}'
+        '${img_url}',
+        '${video_url}'
       );
     `
   }

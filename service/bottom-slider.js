@@ -8,9 +8,9 @@ launch({
     slider.each((index, item) => {
       const el = $(item)
       const info = {
-        slideLabel: el.find('.textLabel').text().trim(),
-        subTitle: el.find('.subtitle').text().trim(),
-        imgUrl: el.find('.slide-image-item').prop('src'),
+        slide_label: el.find('.textLabel').text().trim(),
+        sub_title: el.find('.subtitle').text().trim(),
+        img_url: el.find('.slide-image-item').prop('src'),
         link: el.find('a').prop('href')
       }
 
@@ -20,8 +20,8 @@ launch({
       else if (index === 3) {
         data.push({
           ...info,
-          subTitle: el.find('.slide-content-text .title').text().trim(),
-          imgUrl: el.find('.slide-details-image-item').prop('src')
+          sub_title: el.find('.slide-content-text .title').text().trim(),
+          img_url: el.find('.slide-details-image-item').prop('src')
         })
       }
     })
